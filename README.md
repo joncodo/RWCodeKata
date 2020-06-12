@@ -13,20 +13,14 @@ https://github.com/PokemonTCG/pokemon-tcg-sdk-ruby
 ## Assumptions in the interest of time
 
 - All Json from https://docs.pokemontcg.io/ is valid
-- You don't want any rails CRUD methods tested
-- Not wanting to waste time on security layer
-- All inputs do not need to be sanitized for where queries for a sample app
 
 ## Todo
 
 - [ ] Save the backup in an actual JSON formatted column
 - [ ] Backup the data by card and not by full data store
-- [ ] Create a gif in the readme that shows it all working
 - [x] Force my ruby version for all users
-- [ ] Add how to run section to readme
-- [ ] Return an error when json is not valid
+- [x] Add how to run section to readme
 - [x] Install rubocop
-- [ ] Add tests but not for crud actions
 - [ ] Add in some basic styles to make it look better
 - [ ] Hook up CI
 - [ ] Hook this up to heroku for ease of demo
