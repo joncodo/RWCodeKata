@@ -32,15 +32,15 @@ https://github.com/PokemonTCG/pokemon-tcg-sdk-ruby
 - Not wanting to waste time on security layer
 - All inputs do not need to be sanitized for where queries for a sample app
 
-## Todo 
+## Todo
 
 - [ ] Save the backup in an actual JSON formatted column
 - [ ] Backup the data by card and not by full data store
 - [ ] Create a gif in the readme that shows it all working
-- [ ] Force my ruby version for all users
+- [x] Force my ruby version for all users
 - [ ] Add how to run section to readme
 - [ ] Return an error when json is not valid
-- [ ] Install rubocop
+- [x] Install rubocop
 - [ ] Add tests but not for crud actions
 - [ ] Try making this with a react front end
 - [ ] Add in some basic styles to make it look better

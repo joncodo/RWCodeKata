@@ -4,11 +4,11 @@
   <%= form.submit 'Create Backup'%>
 <% end %>
 
-<%= button_to "Purge All Backups", { action: "destroy_all"}, data: { confirm: "Are you sure you want to delete all backups?" } %>
+<%= button_to 'Purge All Backups', { action: 'destroy_all'}, data: { confirm: 'Are you sure you want to delete all backups?' } %>
 
 <%= form_tag(backups_path, method: :get) do %>
   <%= text_field_tag(:search, params[:search]) %>
-  <%= submit_tag "Search Backup" %>
+  <%= submit_tag 'Search Backup' %>
 <% end %>
 
 <table>
