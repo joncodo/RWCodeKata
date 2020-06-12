@@ -19,6 +19,10 @@ Be creative with this. We want to see a functional app that uses the API (https:
 We typically let candidates chose their language of choice; however, since you do have RoR experience I’d like to see a solution using Rails. Feel free to roll in any gems you’d like to use.
 Assume you only need to support Google Chrome.
 
+## How to run this code
+
+Locally, you can simply do a `bundle install` and then `rails server`
+
 ## Notes
 
 There is a ruby sdk for this...
@@ -42,7 +46,6 @@ https://github.com/PokemonTCG/pokemon-tcg-sdk-ruby
 - [ ] Return an error when json is not valid
 - [x] Install rubocop
 - [ ] Add tests but not for crud actions
-- [ ] Try making this with a react front end
 - [ ] Add in some basic styles to make it look better
 - [ ] Hook up CI
 - [ ] Hook this up to heroku for ease of demo
