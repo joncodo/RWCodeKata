@@ -21,7 +21,7 @@ Assume you only need to support Google Chrome.
 
 ## How to run this code
 
-Locally, you can simply do a `bundle install` and then `rails server`
+Locally, you can simply do a `bundle install` and then `rake db:migrate` and then `rails server`
 
 ## Notes
 
