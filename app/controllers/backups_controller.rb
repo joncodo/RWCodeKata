@@ -25,10 +25,6 @@ class BackupsController < ApplicationController
     redirect_to backups_path
   end
   
-  # def search
-  #   Backup.find
-  # end
-
   def show
     @backup = Backup.find(params[:id])
   end
@@ -39,8 +35,4 @@ class BackupsController < ApplicationController
       puts "JON: >>> " + backup_response
       JSON.parse(backup_response)
     end
-
-    # def backup_params
-    #   params.require(:backup).permit(:body)
-    # end
 end

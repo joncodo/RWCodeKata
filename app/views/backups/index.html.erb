@@ -24,7 +24,7 @@
         <td>
           <%= backup.body %>
         </td>
-        <td><%= button_to 'Show Backup', backup_path(backup) %></td>
+        <td><%= link_to 'Show Backup', backup_path(backup) %></td>
         <td>
           <%= button_to 'Purge Backup', backup_path(backup),
               method: :delete,
