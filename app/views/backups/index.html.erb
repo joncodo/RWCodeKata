@@ -15,3 +15,17 @@
 <%= button_to "Purge Backup", action: "purge" %>
 
 <%= button_to "Search Backup", action: "search" %>
+
+<table>
+  <tr>
+    <th>Created At</th>
+    <th>JSON</th>
+  </tr>
+  <% @backups.each do |backup| %>
+      <tr>
+        <td><%= backup.created_at %></td>
+        <td><%= backup.body %></td>
+        <td><%= link_to 'Show', backup_path(backup) %></td>
+      </tr>
+  <% end %>
+</table>

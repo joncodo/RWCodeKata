@@ -1,4 +1,8 @@
 class BackupsController < ApplicationController
+  def index
+    @backups = Backup.all
+  end
+  
   def create
     @backup = Backup.new(backup_params)
 
@@ -11,7 +15,7 @@ class BackupsController < ApplicationController
   # end
 
   # def search
-  #   Backup.find.all
+  #   Backup.find
   # end
 
   def show
