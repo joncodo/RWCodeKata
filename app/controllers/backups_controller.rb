@@ -1,13 +1,15 @@
+require 'rest-client'
+
 class BackupsController < ApplicationController
   def index
     @backups = Backup.search(params[:search])
   end
   
   def create
-    @backup = Backup.new(backup_params)
+    @backup = Backup.new(body: download_backup)
 
     @backup.save
-    redirect_to @backup
+    redirect_to backups_path
   end
 
   def destroy
@@ -32,11 +34,13 @@ class BackupsController < ApplicationController
   end
 
   private 
-    # def download_backup
-    
-    # end
-
-    def backup_params
-      params.require(:backup).permit(:body)
+    def download_backup
+      backup_response = RestClient.get 'https://api.pokemontcg.io/v1/cards?setCode=det1'
+      puts "JON: >>> " + backup_response
+      JSON.parse(backup_response)
     end
+
+    # def backup_params
+    #   params.require(:backup).permit(:body)
+    # end
 end

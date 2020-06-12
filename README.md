@@ -19,6 +19,12 @@ Be creative with this. We want to see a functional app that uses the API (https:
 We typically let candidates chose their language of choice; however, since you do have RoR experience I’d like to see a solution using Rails. Feel free to roll in any gems you’d like to use.
 Assume you only need to support Google Chrome.
 
+## Notes
+
+There is a ruby sdk for this...
+
+https://github.com/PokemonTCG/pokemon-tcg-sdk-ruby
+
 ## Asumptions in the interest of time
 
 - All Json from https://docs.pokemontcg.io/ is valid

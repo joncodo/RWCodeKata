@@ -1,44 +1,36 @@
 <h1>Detecktive Pikachu Backup Machine</h1>
 
 <%= form_with scope: :backup, url: backups_path, local: true do |form| %>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_field :body %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
+  <%= form.submit 'Create Backup'%>
 <% end %>
 
 <%= button_to "Purge All Backups", { action: "destroy_all"}, data: { confirm: "Are you sure you want to delete all backups?" } %>
 
-
-<%= button_to "Search Backup", action: "search" %>
-
-<h4>Search by date:</h4>
+<h2>Search:</h2>
 <%= form_tag(backups_path, method: :get) do %>
   <%= text_field_tag(:search, params[:search]) %>
   <%= submit_tag ("Search") %>
 <% end %>
 
-
 <table>
   <tr>
     <th>Created At</th>
     <th>JSON</th>
+    <th>Show</th>
+    <th>Purge</th>
   </tr>
   <% @backups.each do |backup| %>
       <tr>
         <td><%= backup.created_at %></td>
-        <td><%= backup.body %></td>
+        <td>
+          <%= backup.body %>
+        </td>
         <td><%= link_to 'Show', backup_path(backup) %></td>
         <td>
           <%= link_to 'Purge', backup_path(backup),
               method: :delete,
               data: { confirm: "Are you sure you want to delete backup with id: #{backup.id}?" } %>
         </td>
-
       </tr>
   <% end %>
 </table>
