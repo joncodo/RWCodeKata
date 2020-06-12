@@ -10,10 +10,19 @@ class BackupsController < ApplicationController
     redirect_to @backup
   end
 
-  # def purge
-  #   Backup.delete
-  # end
+  def destroy
+    @backup = Backup.find(params[:id])
+    @backup.destroy
+ 
+    redirect_to backups_path
+  end
+  
+  def destroy_all
+    Backup.delete_all
 
+    redirect_to backups_path
+  end
+  
   # def search
   #   Backup.find
   # end

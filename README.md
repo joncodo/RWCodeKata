@@ -18,3 +18,12 @@ Be creative with this. We want to see a functional app that uses the API (https:
 ## Some tips
 We typically let candidates chose their language of choice; however, since you do have RoR experience I’d like to see a solution using Rails. Feel free to roll in any gems you’d like to use.
 Assume you only need to support Google Chrome.
+
+## Todo 
+
+- [ ] Install rubocop
+- [ ] Add tests but not for crud actions
+- [ ] Try making this with a react front end
+- [ ] Add in some basic styles to make it look better
+- [ ] Hook up CI
+- [ ] Hook this up to heroku for ease of demo
