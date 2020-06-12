@@ -1,6 +1,6 @@
 class BackupsController < ApplicationController
   def index
-    @backups = Backup.all
+    @backups = Backup.search(params[:search])
   end
   
   def create

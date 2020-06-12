@@ -19,8 +19,19 @@ Be creative with this. We want to see a functional app that uses the API (https:
 We typically let candidates chose their language of choice; however, since you do have RoR experience I’d like to see a solution using Rails. Feel free to roll in any gems you’d like to use.
 Assume you only need to support Google Chrome.
 
+## Asumptions in the interest of time
+
+- All Json from https://docs.pokemontcg.io/ is valid
+- You don't want any rails CRUD methods tested
+- Not wanting to waste time on security layer
+- All inputs do not need to be sanitized for where queries for a sample app
+
 ## Todo 
 
+- [ ] Create a gif in the readme that shows it all working
+- [ ] Force my ruby version for all users
+- [ ] Add how to run section to readme
+- [ ] Return an error when json is not valid
 - [ ] Install rubocop
 - [ ] Add tests but not for crud actions
 - [ ] Try making this with a react front end
