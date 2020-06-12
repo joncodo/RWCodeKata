@@ -10,7 +10,7 @@ There is a ruby sdk for this for when you upgrade it to cards...
 
 https://github.com/PokemonTCG/pokemon-tcg-sdk-ruby
 
-## Asumptions in the interest of time
+## Assumptions in the interest of time
 
 - All Json from https://docs.pokemontcg.io/ is valid
 - You don't want any rails CRUD methods tested
