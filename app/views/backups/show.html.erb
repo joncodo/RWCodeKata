@@ -1,6 +1,12 @@
-<p>
-  <strong>All Cards:</strong>
-  <%= @backup.body %>
-</p>
-
 <%= link_to 'Back', backups_path %>
+
+<%= form_tag(backups_path, method: :get) do %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag "Search Cards" %>
+<% end %>
+
+<p>
+  <% @cards.each do |card| %>
+    <img src="<%= card["imageUrl"] %>">
+  <% end %>
+</p>

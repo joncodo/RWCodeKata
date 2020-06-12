@@ -34,6 +34,7 @@ https://github.com/PokemonTCG/pokemon-tcg-sdk-ruby
 
 ## Todo 
 
+- [ ] Save the backup in an actual JSON formatted column
 - [ ] Backup the data by card and not by full data store
 - [ ] Create a gif in the readme that shows it all working
 - [ ] Force my ruby version for all users

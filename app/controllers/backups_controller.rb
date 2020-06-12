@@ -1,4 +1,5 @@
 require 'rest-client'
+require 'json'
 
 class BackupsController < ApplicationController
   def index
@@ -26,7 +27,8 @@ class BackupsController < ApplicationController
   end
   
   def show
-    @backup = Backup.find(params[:id])
+    backup = Backup.find(params[:id])
+    @cards = backup.body["cards"] 
   end
 
   private 
