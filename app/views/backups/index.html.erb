@@ -1,6 +1,16 @@
 <h1>Detecktive Pikachu Backup Machine</h1>
 
-<%= button_to "Create Backup", action: "create" %>
+<%= form_with scope: :backup, url: backups_path, local: true do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_field :body %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
 
 <%= button_to "Purge Backup", action: "purge" %>
 

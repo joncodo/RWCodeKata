@@ -1,18 +1,29 @@
 class BackupsController < ApplicationController
   def create
+    @backup = Backup.new(backup_params)
 
+    @backup.save
+    redirect_to @backup
   end
 
-  def purge
+  # def purge
+  #   Backup.delete
+  # end
 
-  end
+  # def search
+  #   Backup.find.all
+  # end
 
-  def search
-
+  def show
+    @backup = Backup.find(params[:id])
   end
 
   private 
-    def download_backup
+    # def download_backup
     
+    # end
+
+    def backup_params
+      params.require(:backup).permit(:body)
     end
 end
